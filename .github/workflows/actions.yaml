@@ -18,11 +18,4 @@ jobs:
     - 
       name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: Docker Login
-      uses: docker/login-action@v3.1.0
-      with:
-        registry:
-        username: paripuranam
-        password: getenv('docker_password')
-        ecr: 
-        logout:
+    
